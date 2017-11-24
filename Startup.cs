@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Projet_Juju.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Projet_Juju
 {
@@ -23,6 +25,7 @@ namespace Projet_Juju
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<JujuContext>(options => options.UseSqlServer(Configuration.GetConnectionString("JujuDatabase")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
