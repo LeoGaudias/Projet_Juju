@@ -30,7 +30,8 @@ module.exports = (env) => {
         entry: { 'main-client': './ClientApp/boot-client.tsx' },
         module: {
             rules: [
-                { test: /\.css$/, use: ExtractTextPlugin.extract({ use: isDevBuild ? 'css-loader' : 'css-loader?minimize' }) }
+                { test: /\.css$/, use: ExtractTextPlugin.extract({ use: isDevBuild ? 'css-loader' : 'css-loader?minimize' }) },
+                { test: /\.scss$/, use: [{ loader: "style-loader" /* creates style nodes from JS strings */}, { loader: "css-loader" /* translates CSS into CommonJS */}, { loader: "sass-loader" /* compiles Sass to CSS */}]}
             ]
         },
         output: { path: path.join(__dirname, clientBundleOutputDir) },
