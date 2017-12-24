@@ -5,8 +5,15 @@ using System.Collections.Generic;
 
 namespace Projet_Juju.Migrations
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class InitialCreate : Migration
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="migrationBuilder"></param>
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -194,6 +201,10 @@ namespace Projet_Juju.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="migrationBuilder"></param>
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

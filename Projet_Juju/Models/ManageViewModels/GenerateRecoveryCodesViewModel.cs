@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Projet_Juju.Models.ManageViewModels
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class GenerateRecoveryCodesViewModel
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public string[] RecoveryCodes { get; set; }
     }
 }

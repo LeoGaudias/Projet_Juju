@@ -16,6 +16,9 @@ using Projet_Juju.Services;
 
 namespace Projet_Juju.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Authorize]
     [Route("[controller]/[action]")]
     public class ManageController : Controller
@@ -28,6 +31,14 @@ namespace Projet_Juju.Controllers
 
         private const string AuthenicatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&digits=6";
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userManager"></param>
+        /// <param name="signInManager"></param>
+        /// <param name="emailSender"></param>
+        /// <param name="logger"></param>
+        /// <param name="urlEncoder"></param>
         public ManageController(
           UserManager<ApplicationUser> userManager,
           SignInManager<ApplicationUser> signInManager,
@@ -42,9 +53,16 @@ namespace Projet_Juju.Controllers
             _urlEncoder = urlEncoder;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [TempData]
         public string StatusMessage { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -66,6 +84,11 @@ namespace Projet_Juju.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(IndexViewModel model)
@@ -105,7 +128,7 @@ namespace Projet_Juju.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [HttpPost]
+        ///[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SendVerificationEmail(IndexViewModel model)
         {
@@ -129,6 +152,10 @@ namespace Projet_Juju.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> ChangePassword()
         {
@@ -148,6 +175,11 @@ namespace Projet_Juju.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
@@ -177,6 +209,10 @@ namespace Projet_Juju.Controllers
             return RedirectToAction(nameof(ChangePassword));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> SetPassword()
         {
@@ -197,6 +233,11 @@ namespace Projet_Juju.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SetPassword(SetPasswordViewModel model)
@@ -225,6 +266,10 @@ namespace Projet_Juju.Controllers
             return RedirectToAction(nameof(SetPassword));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> ExternalLogins()
         {
@@ -244,6 +289,11 @@ namespace Projet_Juju.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="provider"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> LinkLogin(string provider)
@@ -257,6 +307,10 @@ namespace Projet_Juju.Controllers
             return new ChallengeResult(provider, properties);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> LinkLoginCallback()
         {
@@ -285,6 +339,11 @@ namespace Projet_Juju.Controllers
             return RedirectToAction(nameof(ExternalLogins));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RemoveLogin(RemoveLoginViewModel model)
@@ -306,6 +365,10 @@ namespace Projet_Juju.Controllers
             return RedirectToAction(nameof(ExternalLogins));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> TwoFactorAuthentication()
         {
@@ -325,6 +388,10 @@ namespace Projet_Juju.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Disable2faWarning()
         {
@@ -342,6 +409,10 @@ namespace Projet_Juju.Controllers
             return View(nameof(Disable2fa));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Disable2fa()
@@ -362,6 +433,10 @@ namespace Projet_Juju.Controllers
             return RedirectToAction(nameof(TwoFactorAuthentication));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> EnableAuthenticator()
         {
@@ -387,6 +462,11 @@ namespace Projet_Juju.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EnableAuthenticator(EnableAuthenticatorViewModel model)
@@ -419,12 +499,20 @@ namespace Projet_Juju.Controllers
             return RedirectToAction(nameof(GenerateRecoveryCodes));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult ResetAuthenticatorWarning()
         {
             return View(nameof(ResetAuthenticator));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ResetAuthenticator()
@@ -442,6 +530,10 @@ namespace Projet_Juju.Controllers
             return RedirectToAction(nameof(EnableAuthenticator));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GenerateRecoveryCodes()
         {

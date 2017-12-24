@@ -7,14 +7,29 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Projet_Juju.Models.ManageViewModels
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ExternalLoginsViewModel
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public IList<UserLoginInfo> CurrentLogins { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public IList<AuthenticationScheme> OtherLogins { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public bool ShowRemoveButton { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string StatusMessage { get; set; }
     }
 }

@@ -14,6 +14,10 @@ namespace Projet_Juju.Migrations
     [Migration("20171217172253_InitialCreate")]
     partial class InitialCreate
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618

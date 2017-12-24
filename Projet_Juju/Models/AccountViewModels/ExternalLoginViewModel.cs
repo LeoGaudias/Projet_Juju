@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Projet_Juju.Models.AccountViewModels
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ExternalLoginViewModel
     {
+        /// <summary>
+        /// 
+        /// </summary>
         [Required]
         [EmailAddress]
         public string Email { get; set; }

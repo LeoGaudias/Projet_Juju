@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Identity;
 namespace Projet_Juju.Models
 {
     // Add profile data for application users by adding properties to the ApplicationUser class
-    public class ApplicationUser : IdentityUser
-    {
-    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    public class ApplicationUser : IdentityUser { }
 }

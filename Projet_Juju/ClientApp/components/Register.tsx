@@ -1,11 +1,11 @@
-﻿import * as React from 'react';
+import * as React from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 
-export default class Login extends React.Component<RouteComponentProps<{}>, {}>
+export default class Register extends React.Component<RouteComponentProps<{}>, {}>
 {
     public render() {
         return <div className="signInUp">
-            <h2>Login</h2>
+            <h2>Registration</h2>
             <div className="row">
                 <div className="col-md-12">
                     <form method="post">
@@ -18,7 +18,7 @@ export default class Login extends React.Component<RouteComponentProps<{}>, {}>
                             <input htmlFor="Password" className="form-control" />
                         </div>
                         <div className="form-group">
-                            <button type="submit" className="btn btn-default">Log in</button>
+                            <button type="submit" className="btn btn-default">Continue</button>
                         </div>
                     </form>
                 </div>

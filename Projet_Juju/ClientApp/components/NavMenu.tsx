@@ -3,28 +3,32 @@ import { NavLink, Link } from 'react-router-dom';
 
 export class NavMenu extends React.Component<{}, {}> {
     public render() {
-        return <div className='main-nav'>
-                <div className='navbar navbar-inverse'>
-                <div className='navbar-header'>
-                    <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
-                        <span className='sr-only'>Toggle navigation</span>
-                        <span className='icon-bar'></span>
-                        <span className='icon-bar'></span>
-                        <span className='icon-bar'></span>
-                    </button>
-                    <Link className='navbar-brand' to={'/'}>RydenPronos</Link>
+        return <nav className='navbar navbar-inverse navbar-fixed-top'>
+                <div className="container">
+                    <div className='navbar-header'>
+                        <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                            <span className='sr-only'>Toggle navigation</span>
+                            <span className='icon-bar'></span>
+                            <span className='icon-bar'></span>
+                            <span className='icon-bar'></span>
+                        </button>
+                        <Link className='navbar-brand' to={'/'}>RydenPronos</Link>
+                    </div>
+                    <div className='navbar-collapse collapse'>
+                        <ul className='nav navbar-nav navbar-right'>
+                            <li>
+                                <NavLink exact to={'/login'} activeClassName='active'>
+                                    <span className='glyphicon glyphicon-log-in'></span> Sign In
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink exact to={'/register'} activeClassName='active'>
+                                    Sign Up
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div className='clearfix'></div>
-                <div className='navbar-collapse collapse'>
-                    <ul className='nav navbar-nav'>
-                        <li>
-                            <NavLink exact to={'/login'} activeClassName='active'>
-                                <span className='glyphicon glyphicon-log-in'></span> Sign In
-                            </NavLink>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>;
+            </nav>;
     }
 }
