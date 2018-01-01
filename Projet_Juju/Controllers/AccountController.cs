@@ -10,9 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Projet_Juju.Models;
-using Projet_Juju.Models.AccountViewModels;
+using Models;
 using Projet_Juju.Services;
+using ViewModels.AccountViewModels;
 
 namespace Projet_Juju.Controllers
 {

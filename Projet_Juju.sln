@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projet_Juju", "Projet_Juju\Projet_Juju.csproj", "{39816663-D95C-4375-BF3B-CC9FFFB0E7F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projet_Juju", "Projet_Juju\Projet_Juju.csproj", "{39816663-D95C-4375-BF3B-CC9FFFB0E7F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{7285CC26-53AA-4EBF-BC97-73CC867A45BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{3AAF28BD-4624-4670-8373-A388B373D098}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{39816663-D95C-4375-BF3B-CC9FFFB0E7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39816663-D95C-4375-BF3B-CC9FFFB0E7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39816663-D95C-4375-BF3B-CC9FFFB0E7F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7285CC26-53AA-4EBF-BC97-73CC867A45BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7285CC26-53AA-4EBF-BC97-73CC867A45BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7285CC26-53AA-4EBF-BC97-73CC867A45BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7285CC26-53AA-4EBF-BC97-73CC867A45BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AAF28BD-4624-4670-8373-A388B373D098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AAF28BD-4624-4670-8373-A388B373D098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AAF28BD-4624-4670-8373-A388B373D098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AAF28BD-4624-4670-8373-A388B373D098}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

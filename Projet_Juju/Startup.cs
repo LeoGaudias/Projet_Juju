@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.PlatformAbstractions;
+using Models;
 using Projet_Juju.Data;
-using Projet_Juju.Models;
 using Projet_Juju.Services;
 using Swashbuckle.AspNetCore.Swagger;
 

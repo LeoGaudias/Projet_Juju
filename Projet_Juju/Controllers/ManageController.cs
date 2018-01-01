@@ -10,9 +10,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Projet_Juju.Models;
-using Projet_Juju.Models.ManageViewModels;
+using Models;
 using Projet_Juju.Services;
+using ViewModels.ManageViewModels;
 
 namespace Projet_Juju.Controllers
 {

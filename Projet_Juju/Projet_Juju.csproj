@@ -35,12 +35,168 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\store\" />
-    <Folder Include="Models\AccountViewModels\" />
-    <Folder Include="Models\ManageViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\components\Login.tsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ClientApp\models\changepasswordviewmodel.cs">
+      <CustomToolNamespace>Models\ManageViewModels\ChangePasswordViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\enableauthenticatorviewmodel.cs">
+      <CustomToolNamespace>Models\ManageViewModels\EnableAuthenticatorViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\errorviewmodel.cs">
+      <CustomToolNamespace>Models\ErrorViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\externalloginsviewmodel.cs">
+      <CustomToolNamespace>Models\ManageViewModels\ExternalLoginsViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\externalloginviewmodel.cs">
+      <CustomToolNamespace>Models\AccountViewModels\ExternalLoginViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\forgotpasswordviewmodel.cs">
+      <CustomToolNamespace>Models\AccountViewModels\ForgotPasswordViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\generaterecoverycodesviewmodel.cs">
+      <CustomToolNamespace>Models\ManageViewModels\GenerateRecoveryCodesViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\indexviewmodel.cs">
+      <CustomToolNamespace>Models\ManageViewModels\IndexViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\loginviewmodel.cs">
+      <CustomToolNamespace>Models\AccountViewModels\LoginViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\loginwith2faviewmodel.cs">
+      <CustomToolNamespace>Models\AccountViewModels\LoginWith2faViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\loginwithrecoverycodeviewmodel.cs">
+      <CustomToolNamespace>Models\AccountViewModels\LoginWithRecoveryCodeViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\registerviewmodel.cs">
+      <CustomToolNamespace>Models\AccountViewModels\RegisterViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\removeloginviewmodel.cs">
+      <CustomToolNamespace>Models\ManageViewModels\RemoveLoginViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\resetpasswordviewmodel.cs">
+      <CustomToolNamespace>Models\AccountViewModels\ResetPasswordViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\setpasswordviewmodel.cs">
+      <CustomToolNamespace>Models\ManageViewModels\SetPasswordViewModel.cs</CustomToolNamespace>
+    </Compile>
+    <Compile Update="ClientApp\models\twofactorauthenticationviewmodel.cs">
+      <CustomToolNamespace>Models\ManageViewModels\TwoFactorAuthenticationViewModel.cs</CustomToolNamespace>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ClientApp\models\ChangePasswordViewModel.ts">
+      <CustomToolNamespace>Models\ManageViewModels\ChangePasswordViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\EnableAuthenticatorViewModel.ts">
+      <CustomToolNamespace>Models\ManageViewModels\EnableAuthenticatorViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\ErrorViewModel.ts">
+      <CustomToolNamespace>Models\ErrorViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\ExternalLoginsViewModel.ts">
+      <CustomToolNamespace>Models\ManageViewModels\ExternalLoginsViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\ExternalLoginViewModel.ts">
+      <CustomToolNamespace>Models\AccountViewModels\ExternalLoginViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\ForgotPasswordViewModel.ts">
+      <CustomToolNamespace>Models\AccountViewModels\ForgotPasswordViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\GenerateRecoveryCodesViewModel.ts">
+      <CustomToolNamespace>Models\ManageViewModels\GenerateRecoveryCodesViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\IndexViewModel.ts">
+      <CustomToolNamespace>Models\ManageViewModels\IndexViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\LoginViewModel.ts">
+      <CustomToolNamespace>Models\AccountViewModels\LoginViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\LoginWith2faViewModel.ts">
+      <CustomToolNamespace>Models\AccountViewModels\LoginWith2faViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\LoginWithRecoveryCodeViewModel.ts">
+      <CustomToolNamespace>Models\AccountViewModels\LoginWithRecoveryCodeViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\RegisterViewModel.ts">
+      <CustomToolNamespace>Models\AccountViewModels\RegisterViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\RemoveLoginViewModel.ts">
+      <CustomToolNamespace>Models\ManageViewModels\RemoveLoginViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\ResetPasswordViewModel.ts">
+      <CustomToolNamespace>Models\AccountViewModels\ResetPasswordViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\SetPasswordViewModel.ts">
+      <CustomToolNamespace>Models\ManageViewModels\SetPasswordViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\models\TwoFactorAuthenticationViewModel.ts">
+      <CustomToolNamespace>Models\ManageViewModels\TwoFactorAuthenticationViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\changepassword.tsx">
+      <CustomToolNamespace>..\ViewModels\ManageViewModels\ChangePasswordViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\enableauthenticator.tsx">
+      <CustomToolNamespace>..\ViewModels\ManageViewModels\EnableAuthenticatorViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\externallogin.tsx">
+      <CustomToolNamespace>..\ViewModels\AccountViewModels\ExternalLoginViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\externallogins.tsx">
+      <CustomToolNamespace>..\ViewModels\ManageViewModels\ExternalLoginsViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\forgotpassword.tsx">
+      <CustomToolNamespace>..\ViewModels\AccountViewModels\ForgotPasswordViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\generaterecoverycodes.tsx">
+      <CustomToolNamespace>..\ViewModels\ManageViewModels\GenerateRecoveryCodesViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\iauthenticationscheme.tsx">
+      <CustomToolNamespace>..\ViewModels\InterfaceViewModels\IAuthenticationSchemeViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\index.tsx">
+      <CustomToolNamespace>..\ViewModels\ManageViewModels\IndexViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\iuserlogininfo.tsx">
+      <CustomToolNamespace>..\ViewModels\InterfaceViewModels\IUserLoginInfoViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\login.tsx">
+      <CustomToolNamespace>..\ViewModels\AccountViewModels\LoginViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\loginwith2fa.tsx">
+      <CustomToolNamespace>..\ViewModels\AccountViewModels\LoginWith2faViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\loginwithrecoverycode.tsx">
+      <CustomToolNamespace>..\ViewModels\AccountViewModels\LoginWithRecoveryCodeViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\register.tsx">
+      <CustomToolNamespace>..\ViewModels\AccountViewModels\RegisterViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\removelogin.tsx">
+      <CustomToolNamespace>..\ViewModels\ManageViewModels\RemoveLoginViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\resetpassword.tsx">
+      <CustomToolNamespace>..\ViewModels\AccountViewModels\ResetPasswordViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\setpassword.tsx">
+      <CustomToolNamespace>..\ViewModels\ManageViewModels\SetPasswordViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\viewModels\twofactorauthentication.tsx">
+      <CustomToolNamespace>..\ViewModels\ManageViewModels\TwoFactorAuthenticationViewModel.cs</CustomToolNamespace>
+    </None>
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
