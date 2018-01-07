@@ -43,10 +43,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\components\Login.tsx" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="ClientApp\models\changepasswordviewmodel.cs">
       <CustomToolNamespace>Models\ManageViewModels\ChangePasswordViewModel.cs</CustomToolNamespace>
     </Compile>

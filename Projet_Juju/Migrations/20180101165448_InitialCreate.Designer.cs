@@ -10,10 +10,17 @@ using System;
 
 namespace Projet_Juju.Migrations
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20180101165448_InitialCreate")]
     partial class InitialCreate
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
